@@ -7,4 +7,13 @@ Rails.application.routes.draw do
   patch "/artists/:id" => "artists#update"
   delete "/artists/:id" => "artists#destroy"
 
+  #albums actions
+  get "/albums" => "albums#index"
+  get "/albums/:id" => "albums#show"
+  post "/albums" => "albums#create"
+  patch "/albums/:id" => "albums#update"
+  delete "/albums/:id" => "albums#destroy"
+
+  post "/users" => "users#create"
+
 end
