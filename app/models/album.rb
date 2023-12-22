@@ -1,3 +1,6 @@
 class Album < ApplicationRecord
   belongs_to :artist
+
+  has_many :collections
+  has_many :users, through: :collections
 end

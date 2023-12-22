@@ -16,4 +16,7 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+
+  post "/collection" => "collections#create"
+  get "/collection" => "collections#index"
 end
