@@ -1,14 +1,14 @@
 class CollectionsController < ApplicationController
   def create
-    @collection = Collection.new(
+    @collected_album = Collection.new(
       user_id: current_user.id,
       album_id: params[:album_id],
       status: "added",
     )
-    if @collection.save
-      render json: { message: "Album added to collection!" }, status: :created
+    if @collected_album.save
+      render :show, status: :created
     else
-      render json: { errors: @collection.errors.full_messages }, status: :bad_request
+      render json: { errors: @collected_album.errors.full_messages }, status: :bad_request
     end
   end
 
