@@ -1,3 +1,3 @@
-json.id favorite_artists.id
-json.artist favorite_artists.artist
-json.status favorite_artists.status
+json.id favorite_artist.id
+json.artist favorite_artist.artist
+json.status favorite_artist.status

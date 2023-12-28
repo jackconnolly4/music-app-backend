@@ -1,12 +1,12 @@
 class FavoriteArtistsController < ApplicationController
 
   def create
-    @favorite_artist = Favorite_Artist.new(
+    @favorite_artist = FavoriteArtist.new(
       user_id: current_user.id,
       artist_id: params[:artist_id],
       status: "favorited",
     )
-    if @Favorite_Artist.save
+    if @favorite_artist.save
       render :show, status: :created
     else
       render json: { errors: @collected_album.errors.full_messages }, status: :bad_request
@@ -19,7 +19,7 @@ class FavoriteArtistsController < ApplicationController
   end
 
   def destroy
-    @favorite_artist= Favorite_Artist.find_by(id params[:id])
+    @favorite_artist= FavoriteArtist.find_by(id params[:id])
     @collected_album.destroy
     render json: { message: "Artist removed from your favorites"}
   end
