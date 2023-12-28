@@ -19,4 +19,9 @@ Rails.application.routes.draw do
 
   post "/collection" => "collections#create"
   get "/collection" => "collections#index"
+  delete "/collection/:id" => "collections#destroy"
+
+  post "/favorite_artists" => "favorite_artists#create"
+  get "/favorite_artists" => "favorite_artists#index"
+  delete "/favorite_artists/:id" => "favorite_artists#destroy"
 end

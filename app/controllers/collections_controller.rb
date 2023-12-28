@@ -16,4 +16,10 @@ class CollectionsController < ApplicationController
     @collections = current_user.collections.where(status:"added")
     render :index
   end
+
+  def destroy
+    @collected_album = Collection.find_by(id params[:id])
+    @collected_album.destroy
+    render json: { message: "Album removed from your collection"}
+  end
 end

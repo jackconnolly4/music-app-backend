@@ -17,4 +17,10 @@ class FavoriteArtistsController < ApplicationController
     @favorite_artists = current_user.favorite_artists.where(status:"favorited")
     render :index
   end
+
+  def destroy
+    @favorite_artist= Favorite_Artist.find_by(id params[:id])
+    @collected_album.destroy
+    render json: { message: "Artist removed from your favorites"}
+  end
 end
