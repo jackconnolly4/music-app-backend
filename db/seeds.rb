@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# User.create!([
+#   {first_name: nil, last_name: nil, username: "Jack", email: "Jack@mail.com", password_digest: "$2a$12$JjGUFy24W3lQh5XWobbEIeGP1zKXofkjJy/lUROYJ3lKCFiro81zi"},
+#   {first_name: nil, last_name: nil, username: "Gene", email: "gene@mail.com", password_digest: "$2a$12$1jXAfq38fLqhGZV3eHGUieehVI3LN6CSleTVVDYrLtTO1hGP0.hk6"},
+#   {first_name: nil, last_name: nil, username: "Dean", email: "Dean@mail.com", password_digest: "$2a$12$gJnXw7oZrK35TcLeUPDmI.hiLxUkeWXxzhrq1Fd826qCW5hXB5sTK"},
+#   {first_name: nil, last_name: nil, username: "Mean", email: "Mean@mail.com", password_digest: "$2a$12$fuzFZuqSdsPLM5TB56zsP.zH65.pT187E6QH3uT45xexQZkfm0sHK"},
+#   {first_name: nil, last_name: nil, username: "beef", email: "Beef@mail.com", password_digest: "$2a$12$454tRMxbXu58i/SfcAm/Y.ooE5AeO2Zz0tiLNWw0Z9uVGWGwJQCAW"}
+# ])
+FavoriteArtist.create!([
+  {artist_id: 1, user_id: 4, status: "favorited"},
+  {artist_id: 2, user_id: 4, status: "favorited"}
+])
+Collection.create!([
+  {user_id: 1, album_id: 1, artist_id: nil, status: "added"},
+  {user_id: 4, album_id: 2, artist_id: nil, status: "added"}
+])
+# Artist.create!([
+#   {name: "Primus", image_url: "https://lastfm.freetls.fastly.net/i/u/770x0/4c3272a9ec984d73b3800f5e0d2e8785.jpg#4c3272a9ec984d73b3800f5e0d2e8785", bio: "Primus is a San Francisco-based band formed in the mid-1980s by two ex-members of thrash metal band Blind Illusion: Les Claypool and Larry LaLonde. Les (vocals and bass guitar) has been the only constant member. They have had two guitar players (although Larry has held onto the role for the past 30 years) and many different drummers (although Tim Alexander, Bryan Mantia and Jay Lane were the only ones who recorded with the band) in the past.\n\nTheir music has proven difficult to define; while usually considered by critics to be funk metal or alternative metal, Primus has been called everything from \"thrash funk\" (as the band blends funk-style bass technique with thrash influenced guitar riffs and songs tempos), to \"alternative rock\" to \"the Freak Brothers set to music.\" Les Claypool himself once described their music as \"psychedelic polka.\" Thanks to the diversity of their sound they have been able to gain fans from nearly all rock subgenres. Primus is the only band to have their own ID3 genre tag in Winamp. They are characterized by their irreverent approach to music — they release their records on Claypool's Prawn Song Records label, a parody of Led Zeppelin's Swan Song, and their catchphrase was, for several years, \"Primus Sucks!\". In 2003 the band dropped that catchphrase, as well as Tim Alexander's nickname \"Herb\".", genre: "Alternative Metal"},
+#   {name: "Ween", image_url: "https://i.scdn.co/image/4fe164354c1ab90670bdb67606c3db2cd6de7514", bio: "eclectic alternative rock duo from New Hope, PA", genre: "Alternative Rock"},
+#   {name: "The Replacements", image_url: "https://upload.wikimedia.org/wikipedia/commons/e/e7/The_Replacements_%281984_Laura_Levine_portrait%29.jpg", bio: "influential alternative rock group from Minneapolis, MN", genre: "Alternative Rock"},
+#   {name: "Kero Kero Bonito", image_url: "https://lastfm.freetls.fastly.net/i/u/ar0/808bb91e9a9a54a24ba655472b03652d.jpg", bio: "Kero Kero Bonito is a British band from London, England. The band consists of vocalist Sarah Bonito and producers Gus Lobban and Jamie Bulled. Their name comes from the Japanese onomatopoeic words for frog croaks and a type of fish.\n\nGus and Jamie grew up in the suburbs south of London and went to school together. In search for a new band member, they posted advertisements, including on MixB, an online bulletin board for Japanese expatriates, largely due to their interest in Japanese rap. They selected Sarah based on her background in art, and their interest in her bilingual ability. Although she had collaborated with a Japanese girl group previously, Sarah did not have a background in professional singing; instead, she was interested in collaborating with Gus and Jamie simply because she \"wanted to try it\".", genre: "Indie Pop"},
+#   {name: "Belle & Sebastian", image_url: "https://lastfm.freetls.fastly.net/i/u/ar0/0dc8da40a25946269096b98b9163634e.jpg", bio: "Belle and Sebastian is a band from Glasgow. Led by guitarist/vocalist Stuart Murdoch, the seven-piece band has an intimate, majestic sound that is equal parts folk-rock and '60s pop. Murdoch has a gift not only for whimsy and surrealism, but also for odd, unsettling lyrical detail which keeps the songs grounded in a tangible reality.", genre: "Indie Pop"}
+# ])
+# Album.create!([
+#   {title: "The Pod", artist_id: 1, image_url: "https://upload.wikimedia.org/wikipedia/en/2/29/Ween-ThePod.jpg", description: "The Pod is the second studio album by Ween, originally released by Shimmy Disc in September 1991. Most often considered the band's \"challenging album,\" The Pod (named for the apartment Dean and Gene shared in which all of the album's songs were recorded) is probably also the band's most surreal.\n\nThe cover art on this album is a takeoff of the 1975 The Best of Leonard Cohen LP record cover. Ween simply positioned a photo of Mean Ween's head (wearing a \"nitrous oxide powered bong\" which is sometimes mistaken for a \"Scotchgard bong\") over Cohen's cover art and did alterations to the title and other graphics. The copy of the Leonard Cohen record that Ween used had purportedly belonged to Dean Ween's mother, Eileen Ween. The Pod, according to Ween-lore, was written under the influence of Scotchgard, but this was later refuted by Gene and Dean themselves as being \"the most slime-bag thing we could think of\".", year: "1991", genre: "Experimental"},
+#   {title: "Time n Place", artist_id: 5, image_url: "https://upload.wikimedia.org/wikipedia/en/6/6a/%27Time_N_Place%27_by_Kero_Kero_Bonito.jpg", description: "Time 'n' Place is the second studio album by British indie pop band Kero Kero Bonito, released on 1 October 2018 through Polyvinyl Record Co. Released with no prior announcement, it is their first album released under Polyvinyl.", year: "2018", genre: "Indie Rock"}
+# ])
