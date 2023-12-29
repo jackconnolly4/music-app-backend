@@ -1,4 +1,4 @@
-
+json.id album.id
 json.title album.title
 json.artist album.artist.name
 json.image_url album.image_url
