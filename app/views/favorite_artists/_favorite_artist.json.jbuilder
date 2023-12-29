@@ -1,3 +1,8 @@
-json.id favorite_artist.id
-json.artist favorite_artist.artist
-json.status favorite_artist.status
+
+json.artist do 
+  json.artist favorite_artist.artist.name
+  json.image_url favorite_artist.artist.image_url
+  json.genre favorite_artist.artist.genre
+end
+
+

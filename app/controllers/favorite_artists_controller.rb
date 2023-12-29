@@ -9,7 +9,7 @@ class FavoriteArtistsController < ApplicationController
     if @favorite_artist.save
       render :show, status: :created
     else
-      render json: { errors: @collected_album.errors.full_messages }, status: :bad_request
+      render json: { errors: @favorite_artist.errors.full_messages }, status: :bad_request
     end
   end
 

@@ -5,14 +5,14 @@
 #   {first_name: nil, last_name: nil, username: "Mean", email: "Mean@mail.com", password_digest: "$2a$12$fuzFZuqSdsPLM5TB56zsP.zH65.pT187E6QH3uT45xexQZkfm0sHK"},
 #   {first_name: nil, last_name: nil, username: "beef", email: "Beef@mail.com", password_digest: "$2a$12$454tRMxbXu58i/SfcAm/Y.ooE5AeO2Zz0tiLNWw0Z9uVGWGwJQCAW"}
 # ])
-FavoriteArtist.create!([
-  {artist_id: 1, user_id: 4, status: "favorited"},
-  {artist_id: 2, user_id: 4, status: "favorited"}
-])
-Collection.create!([
-  {user_id: 1, album_id: 1, artist_id: nil, status: "added"},
-  {user_id: 4, album_id: 2, artist_id: nil, status: "added"}
-])
+# FavoriteArtist.create!([
+#   {artist_id: 1, user_id: 4, status: "favorited"},
+#   {artist_id: 2, user_id: 4, status: "favorited"}
+# ])
+# Collection.create!([
+#   {user_id: 1, album_id: 1, artist_id: nil, status: "added"},
+#   {user_id: 4, album_id: 2, artist_id: nil, status: "added"}
+# ])
 # Artist.create!([
 #   {name: "Primus", image_url: "https://lastfm.freetls.fastly.net/i/u/770x0/4c3272a9ec984d73b3800f5e0d2e8785.jpg#4c3272a9ec984d73b3800f5e0d2e8785", bio: "Primus is a San Francisco-based band formed in the mid-1980s by two ex-members of thrash metal band Blind Illusion: Les Claypool and Larry LaLonde. Les (vocals and bass guitar) has been the only constant member. They have had two guitar players (although Larry has held onto the role for the past 30 years) and many different drummers (although Tim Alexander, Bryan Mantia and Jay Lane were the only ones who recorded with the band) in the past.\n\nTheir music has proven difficult to define; while usually considered by critics to be funk metal or alternative metal, Primus has been called everything from \"thrash funk\" (as the band blends funk-style bass technique with thrash influenced guitar riffs and songs tempos), to \"alternative rock\" to \"the Freak Brothers set to music.\" Les Claypool himself once described their music as \"psychedelic polka.\" Thanks to the diversity of their sound they have been able to gain fans from nearly all rock subgenres. Primus is the only band to have their own ID3 genre tag in Winamp. They are characterized by their irreverent approach to music — they release their records on Claypool's Prawn Song Records label, a parody of Led Zeppelin's Swan Song, and their catchphrase was, for several years, \"Primus Sucks!\". In 2003 the band dropped that catchphrase, as well as Tim Alexander's nickname \"Herb\".", genre: "Alternative Metal"},
 #   {name: "Ween", image_url: "https://i.scdn.co/image/4fe164354c1ab90670bdb67606c3db2cd6de7514", bio: "eclectic alternative rock duo from New Hope, PA", genre: "Alternative Rock"},
